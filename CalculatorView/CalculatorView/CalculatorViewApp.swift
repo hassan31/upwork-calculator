@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct CalculatorViewApp: App {
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            CalculatorView()
-                .frame(minWidth: 500, minHeight: 800)
+            ContentView()
         }
     }
 }

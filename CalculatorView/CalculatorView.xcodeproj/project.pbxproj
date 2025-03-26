@@ -7,15 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E6E23892D8B9CB70081FEFF /* TransactionsHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E23882D8B9CB70081FEFF /* TransactionsHistoryViewModel.swift */; };
+		0E6E23912D8B9D210081FEFF /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E23902D8B9D200081FEFF /* CalculatorViewModel.swift */; };
+		0E6E23962D8B9FA60081FEFF /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0E6E23952D8B9FA60081FEFF /* FirebaseCore */; };
+		0E6E23982D8B9FA60081FEFF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0E6E23972D8B9FA60081FEFF /* FirebaseFirestore */; };
+		0E6E239B2D8BB5C40081FEFF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E239A2D8BB5C00081FEFF /* DateExtension.swift */; };
+		0E6E239F2D8BC0170081FEFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E6E239E2D8BC0170081FEFF /* GoogleService-Info.plist */; };
+		0E6E23A32D8E48C50081FEFF /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E23A22D8E48C50081FEFF /* StatusView.swift */; };
+		0E91AE8A2D93860D00501EC1 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E91AE892D93860400501EC1 /* TransactionModel.swift */; };
+		0E91AE8D2D9387E600501EC1 /* LoadingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E91AE8C2D9387E600501EC1 /* LoadingModifier.swift */; };
+		0E91AE8F2D938F4200501EC1 /* PaymentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E91AE8E2D938F4100501EC1 /* PaymentType.swift */; };
+		0E91AE912D938F5F00501EC1 /* TransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E91AE902D938F5E00501EC1 /* TransactionStatus.swift */; };
 		0E9E16262D85ED7B006375D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E9E161F2D85ED7B006375D0 /* Preview Assets.xcassets */; };
 		0E9E16272D85ED7B006375D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E9E16212D85ED7B006375D0 /* Assets.xcassets */; };
 		0E9E16282D85ED7B006375D0 /* CalculatorViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E16232D85ED7B006375D0 /* CalculatorViewApp.swift */; };
 		0E9E16292D85ED7B006375D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E16242D85ED7B006375D0 /* ContentView.swift */; };
 		0E9E162B2D85EDA4006375D0 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E162A2D85EDA4006375D0 /* CalculatorView.swift */; };
 		0E9E162D2D85F5DD006375D0 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E162C2D85F5DD006375D0 /* ColorExtension.swift */; };
+		0E9E162F2D8639CB006375D0 /* TransactionsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E162E2D8639CB006375D0 /* TransactionsHistoryView.swift */; };
+		0E9E16312D8639F8006375D0 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E16302D8639F3006375D0 /* Modifiers.swift */; };
+		0E9E16332D863AE5006375D0 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E16322D863AE5006375D0 /* SummaryView.swift */; };
+		0E9E16372D863DA7006375D0 /* EarningRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E16362D863DA2006375D0 /* EarningRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E6E23882D8B9CB70081FEFF /* TransactionsHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistoryViewModel.swift; sourceTree = "<group>"; };
+		0E6E23902D8B9D200081FEFF /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		0E6E239A2D8BB5C00081FEFF /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		0E6E239E2D8BC0170081FEFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0E6E23A22D8E48C50081FEFF /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		0E91AE892D93860400501EC1 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		0E91AE8C2D9387E600501EC1 /* LoadingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingModifier.swift; sourceTree = "<group>"; };
+		0E91AE8E2D938F4100501EC1 /* PaymentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentType.swift; sourceTree = "<group>"; };
+		0E91AE902D938F5E00501EC1 /* TransactionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatus.swift; sourceTree = "<group>"; };
 		0E9E160D2D85ED6E006375D0 /* CalculatorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9E161F2D85ED7B006375D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0E9E16212D85ED7B006375D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +48,10 @@
 		0E9E16242D85ED7B006375D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0E9E162A2D85EDA4006375D0 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		0E9E162C2D85F5DD006375D0 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		0E9E162E2D8639CB006375D0 /* TransactionsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistoryView.swift; sourceTree = "<group>"; };
+		0E9E16302D8639F3006375D0 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		0E9E16322D863AE5006375D0 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		0E9E16362D863DA2006375D0 /* EarningRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +59,88 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E6E23962D8B9FA60081FEFF /* FirebaseCore in Frameworks */,
+				0E6E23982D8B9FA60081FEFF /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E6E238A2D8B9CBC0081FEFF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0E6E238B2D8B9CCD0081FEFF /* CalculatorView */,
+				0E9E16302D8639F3006375D0 /* Modifiers.swift */,
+				0E6E238C2D8B9CD90081FEFF /* SummaryView */,
+				0E6E238D2D8B9CEA0081FEFF /* TransactionsHistoryView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0E6E238B2D8B9CCD0081FEFF /* CalculatorView */ = {
+			isa = PBXGroup;
+			children = (
+				0E9E162A2D85EDA4006375D0 /* CalculatorView.swift */,
+				0E6E23902D8B9D200081FEFF /* CalculatorViewModel.swift */,
+				0E91AE8E2D938F4100501EC1 /* PaymentType.swift */,
+				0E91AE902D938F5E00501EC1 /* TransactionStatus.swift */,
+			);
+			path = CalculatorView;
+			sourceTree = "<group>";
+		};
+		0E6E238C2D8B9CD90081FEFF /* SummaryView */ = {
+			isa = PBXGroup;
+			children = (
+				0E9E16322D863AE5006375D0 /* SummaryView.swift */,
+			);
+			path = SummaryView;
+			sourceTree = "<group>";
+		};
+		0E6E238D2D8B9CEA0081FEFF /* TransactionsHistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				0E9E162E2D8639CB006375D0 /* TransactionsHistoryView.swift */,
+				0E6E23882D8B9CB70081FEFF /* TransactionsHistoryViewModel.swift */,
+				0E91AE892D93860400501EC1 /* TransactionModel.swift */,
+			);
+			path = TransactionsHistoryView;
+			sourceTree = "<group>";
+		};
+		0E6E23992D8BB5B60081FEFF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E6E239A2D8BB5C00081FEFF /* DateExtension.swift */,
+				0E9E162C2D85F5DD006375D0 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0E6E23A02D8E48B50081FEFF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0E6E23A12D8E48BB0081FEFF /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		0E6E23A12D8E48BB0081FEFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E6E23A22D8E48C50081FEFF /* StatusView.swift */,
+				0E9E16362D863DA2006375D0 /* EarningRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0E91AE8B2D9387D400501EC1 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				0E91AE8C2D9387E600501EC1 /* LoadingModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		0E9E16042D85ED6E006375D0 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +168,16 @@
 		0E9E16252D85ED7B006375D0 /* CalculatorView */ = {
 			isa = PBXGroup;
 			children = (
-				0E9E16202D85ED7B006375D0 /* Preview Content */,
-				0E9E16212D85ED7B006375D0 /* Assets.xcassets */,
 				0E9E16222D85ED7B006375D0 /* CalculatorView.entitlements */,
+				0E6E239E2D8BC0170081FEFF /* GoogleService-Info.plist */,
 				0E9E16232D85ED7B006375D0 /* CalculatorViewApp.swift */,
 				0E9E16242D85ED7B006375D0 /* ContentView.swift */,
-				0E9E162A2D85EDA4006375D0 /* CalculatorView.swift */,
-				0E9E162C2D85F5DD006375D0 /* ColorExtension.swift */,
+				0E9E16212D85ED7B006375D0 /* Assets.xcassets */,
+				0E91AE8B2D9387D400501EC1 /* Modifiers */,
+				0E6E23992D8BB5B60081FEFF /* Extensions */,
+				0E6E238A2D8B9CBC0081FEFF /* Modules */,
+				0E9E16202D85ED7B006375D0 /* Preview Content */,
+				0E6E23A02D8E48B50081FEFF /* Shared */,
 			);
 			path = CalculatorView;
 			sourceTree = "<group>";
@@ -92,6 +199,8 @@
 			);
 			name = CalculatorView;
 			packageProductDependencies = (
+				0E6E23952D8B9FA60081FEFF /* FirebaseCore */,
+				0E6E23972D8B9FA60081FEFF /* FirebaseFirestore */,
 			);
 			productName = CalculatorView;
 			productReference = 0E9E160D2D85ED6E006375D0 /* CalculatorView.app */;
@@ -121,6 +230,9 @@
 			);
 			mainGroup = 0E9E16042D85ED6E006375D0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0E6E23942D8B9FA60081FEFF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0E9E160E2D85ED6E006375D0 /* Products */;
 			projectDirPath = "";
@@ -138,6 +250,7 @@
 			files = (
 				0E9E16262D85ED7B006375D0 /* Preview Assets.xcassets in Resources */,
 				0E9E16272D85ED7B006375D0 /* Assets.xcassets in Resources */,
+				0E6E239F2D8BC0170081FEFF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +262,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E9E16282D85ED7B006375D0 /* CalculatorViewApp.swift in Sources */,
+				0E91AE8D2D9387E600501EC1 /* LoadingModifier.swift in Sources */,
+				0E9E16332D863AE5006375D0 /* SummaryView.swift in Sources */,
+				0E6E23A32D8E48C50081FEFF /* StatusView.swift in Sources */,
 				0E9E162B2D85EDA4006375D0 /* CalculatorView.swift in Sources */,
+				0E9E16372D863DA7006375D0 /* EarningRow.swift in Sources */,
+				0E91AE8F2D938F4200501EC1 /* PaymentType.swift in Sources */,
+				0E6E23912D8B9D210081FEFF /* CalculatorViewModel.swift in Sources */,
 				0E9E16292D85ED7B006375D0 /* ContentView.swift in Sources */,
+				0E6E239B2D8BB5C40081FEFF /* DateExtension.swift in Sources */,
+				0E91AE8A2D93860D00501EC1 /* TransactionModel.swift in Sources */,
+				0E9E162F2D8639CB006375D0 /* TransactionsHistoryView.swift in Sources */,
+				0E91AE912D938F5F00501EC1 /* TransactionStatus.swift in Sources */,
+				0E9E16312D8639F8006375D0 /* Modifiers.swift in Sources */,
+				0E6E23892D8B9CB70081FEFF /* TransactionsHistoryViewModel.swift in Sources */,
 				0E9E162D2D85F5DD006375D0 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +406,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalculatorView/Preview Content\"";
+				DEVELOPMENT_TEAM = L7W7SEDJZH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -298,7 +424,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.calculatorview.CalculatorView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.product.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -318,6 +444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalculatorView/Preview Content\"";
+				DEVELOPMENT_TEAM = L7W7SEDJZH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -335,7 +462,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.calculatorview.CalculatorView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.product.calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -368,6 +495,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0E6E23942D8B9FA60081FEFF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E6E23952D8B9FA60081FEFF /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E6E23942D8B9FA60081FEFF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		0E6E23972D8B9FA60081FEFF /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E6E23942D8B9FA60081FEFF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E9E16052D85ED6E006375D0 /* Project object */;
 }

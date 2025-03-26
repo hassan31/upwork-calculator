@@ -1,0 +1,44 @@
+//
+//  StatusView.swift
+//  CalculatorView
+//
+//  Created by Muhammad Hassan on 2025-03-21.
+//
+
+import SwiftUI
+
+struct StatusView: View {
+    private let status: TransactionStatus
+    
+    init (status: TransactionStatus) {
+        self.status = status
+    }
+    
+    var body: some View {
+        mainContent
+            .font(.title3)
+            .cornerRadius(16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    private var mainContent: some View {
+        switch status {
+        case .pending:
+            Text(status.rawValue)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 4)
+                .foregroundColor(.red)
+                .background(.red.opacity(0.2))
+        case .processed:
+            Text(status.rawValue)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 4)
+                .foregroundColor(.blue)
+                .background(.blue.opacity(0.2))
+        }
+    }
+}
+
+#Preview {
+    StatusView(status: .pending)
+}
