@@ -22,6 +22,11 @@ struct ContentView: View {
                     .tabItem {
                         Label("Earnings", systemImage: "list.bullet")
                     }
+                
+                ProfileView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person.crop.circle.fill")
+                    }
             }
         } else {
             AuthenticationTabView()
