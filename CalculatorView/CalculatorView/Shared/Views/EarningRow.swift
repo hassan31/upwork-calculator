@@ -29,10 +29,10 @@ struct EarningRowView: View {
                 Spacer()
                 StatusView(status: TransactionStatus(rawValue: transaction.transactionStatus) ?? .pending)
                 Spacer()
-                Text("$\(transaction.netEarnings, specifier: "%.2f")")
+                Text(transaction.netEarnings.formattedAmount())
                     .font(.title3)
                     .bold()
-                    .foregroundColor(.green)
+                    .foregroundColor(.primaryColor)
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }
         }

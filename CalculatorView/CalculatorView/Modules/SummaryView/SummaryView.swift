@@ -42,11 +42,14 @@ struct SummaryView: View {
     
     private var headerRow: some View {
         HStack {
-            Text("Date").bold()
+            Text("Date")
+                .font(.system(size: 18, weight: .bold))
                 .frame(width: Constants.columnWidth150, alignment: .leading)
-            Text("Description").bold()
+            Text("Description")
+                .font(.system(size: 18, weight: .bold))
                 .frame(maxWidth: .infinity, alignment: .leading)
-            Text("Amount").bold()
+            Text("Amount")
+                .font(.system(size: 18, weight: .bold))
                 .frame(width: Constants.columnWidth150, alignment: .trailing)
         }
         .padding()
@@ -57,10 +60,13 @@ struct SummaryView: View {
     private var earningsRow: some View {
         HStack(alignment: .top) {
             Text(transaction.date.formattedDate)
+                .font(.system(size: 18))
                 .frame(width: Constants.columnWidth150, alignment: .leading)
             Text("Contract Earnings")
+                .font(.system(size: 18))
                 .frame(maxWidth: .infinity, alignment: .leading)
             Text(transaction.contractEarnings.formattedAmount())
+                .font(.system(size: 18, weight: .bold))
                 .frame(width: Constants.columnWidth150, alignment: .trailing)
         }
         .padding()
@@ -73,7 +79,7 @@ struct SummaryView: View {
             Text(transaction.date.formattedDate)
                 .frame(width: Constants.columnWidth150, alignment: .leading)
             
-            VStack(alignment: .leading, spacing: 8) { // Group both rows together
+            VStack(alignment: .leading, spacing: 12) {
                 serviceFeeRow
                 gstTaxRow
             }
@@ -87,9 +93,10 @@ struct SummaryView: View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 2) {
                 Text("Service Fee")
+                    .font(.system(size: 18, weight: .medium))
                 Text(serviceFeeFormula)
-                    .font(.caption)
-                    .foregroundColor(.gray)
+                    .font(.system(size: 14))
+                    .foregroundColor(.primary)
             }
             Spacer()
             Text(serviceFee.formattedAmount(showNegativeSign: true))
@@ -111,12 +118,14 @@ struct SummaryView: View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 2) {
                 Text("GST (CA) service fee refund")
+                    .font(.system(size: 18, weight: .medium))
                 Text(gstFormula)
-                    .font(.caption)
-                    .foregroundColor(.gray)
+                    .font(.system(size: 14))
+                    .foregroundColor(.primary)
             }
             Spacer()
             Text(gstTaxAmount.formattedAmount(showNegativeSign: true))
+                .font(.system(size: 18, weight: .medium))
                 .frame(alignment: .trailing)
         }
     }

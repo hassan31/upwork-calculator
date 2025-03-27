@@ -32,8 +32,8 @@ struct StatusView: View {
             Text(status.rawValue)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 4)
-                .foregroundColor(.blue)
-                .background(.blue.opacity(0.2))
+                .foregroundColor(.white)
+                .background(Color.primaryColor)
         }
     }
 }
