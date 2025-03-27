@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 import FirebaseFirestore
 
 final class CalculatorViewModel: ObservableObject {
@@ -16,6 +17,8 @@ final class CalculatorViewModel: ObservableObject {
     @Published var paymentType: PaymentType = .fixedPrice
     @Published var transactionStatus: TransactionStatus = .pending
     @Published var newTransaction: Transaction?
+    @Published var alert: AlertState?
+    @Published var showAlert: Bool = false
     
     var enableCalculateButton: Bool {
         !inputAmount.isEmpty && !transactionId.isEmpty && !clientDescription.isEmpty
@@ -47,6 +50,10 @@ final class CalculatorViewModel: ObservableObject {
             return
         }
         
+        guard let userId = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
         let transactionData: [String: Any] = [
             "date": Timestamp(date: newTransaction.date),
             "transactionId": newTransaction.transactionId,
@@ -59,18 +66,22 @@ final class CalculatorViewModel: ObservableObject {
             "transactionStatus": transactionStatus.rawValue
         ]
         
-        db.collection("transactions").addDocument(data: transactionData) { [weak self] error in
-            guard let self else {
-                return
+        db.collection("users")
+            .document(userId)
+            .collection("transactions")
+            .addDocument(data: transactionData) { [weak self] error in
+                guard let self else {
+                    return
+                }
+                
+                if let error {
+                    alert = .error("Firestore Error: \(error.localizedDescription)")
+                } else {
+                    alert = .success("Transaction successfully saved")
+                    self.clear()
+                }
+                showAlert = true
             }
-            
-            if let error {
-                print("Firestore Error: \(error.localizedDescription)")
-            } else {
-                print("Transaction successfully saved")
-                self.clear()
-            }
-        }
     }
     
     func clear() {

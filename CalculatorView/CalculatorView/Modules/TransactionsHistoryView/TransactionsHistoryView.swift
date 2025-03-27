@@ -18,7 +18,7 @@ struct TransactionsHistoryView: View {
             }
         }
         .showLoading(viewModel.isLoading)
-        .onAppear {
+        .task {
             viewModel.fetchTransactions()
         }
     }

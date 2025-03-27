@@ -12,6 +12,7 @@ struct CalculatorView: View {
     
     var body: some View {
         mainContent
+            .showAlert(isPresented: $viewModel.showAlert, state: viewModel.alert)
     }
     
     private var mainContent: some View {
