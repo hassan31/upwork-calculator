@@ -28,9 +28,10 @@ struct TransactionsHistoryView: View {
         if !viewModel.transactions.isEmpty {
             List {
                 ForEach(viewModel.transactions, id: \.id) { transaction in
-                    NavigationLink(destination: SummaryView(transaction: transaction)) {
-                        EarningRowView(transaction: transaction)
-                    }
+                    NavigationLink(
+                        destination: TransactionDetailsView(transaction: transaction)) {
+                            EarningRowView(transaction: transaction)
+                        }
                 }
             }
             .navigationTitle("Transaction History")

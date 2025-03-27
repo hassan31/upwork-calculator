@@ -56,6 +56,7 @@ final class TransactionsHistoryViewModel: ObservableObject {
                             transactionStatus: transactionStatus
                         )
                     }
+                    .sorted { $0.date > $1.date }
                 }
             }
         }

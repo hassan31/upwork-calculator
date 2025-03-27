@@ -15,4 +15,8 @@ extension Color {
         return Color.gray.opacity(0.2) // macOS alternative
         #endif
     }
+    
+    static var primaryColor: Color {
+        Color("primary")
+    }
 }

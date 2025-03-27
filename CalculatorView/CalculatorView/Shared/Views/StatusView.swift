@@ -18,7 +18,6 @@ struct StatusView: View {
         mainContent
             .font(.title3)
             .cornerRadius(16)
-            .frame(maxWidth: .infinity, alignment: .leading)
     }
     
     private var mainContent: some View {

@@ -19,6 +19,10 @@ struct SummaryView: View {
     }
     
     var body: some View {
+        mainContent
+    }
+    
+    private var mainContent: some View {
         VStack(alignment: .leading, spacing: 8) {
             headerTitle
             headerRow
@@ -56,7 +60,7 @@ struct SummaryView: View {
                 .frame(width: Constants.columnWidth150, alignment: .leading)
             Text("Contract Earnings")
                 .frame(maxWidth: .infinity, alignment: .leading)
-            Text("$\(transaction.contractEarnings, specifier: "%.2f")")
+            Text(transaction.contractEarnings.formattedAmount())
                 .frame(width: Constants.columnWidth150, alignment: .trailing)
         }
         .padding()
@@ -83,35 +87,56 @@ struct SummaryView: View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 2) {
                 Text("Service Fee")
-                Text("$\(transaction.contractEarnings, specifier: "%.2f") x \(transaction.servicePercentage, specifier: "%.1f")% = $\(serviceFee, specifier: "%.2f")")
+                Text(serviceFeeFormula)
                     .font(.caption)
                     .foregroundColor(.gray)
             }
             Spacer()
-            Text("-$\(serviceFee, specifier: "%.2f")")
+            Text(serviceFee.formattedAmount(showNegativeSign: true))
                 .frame(alignment: .trailing)
         }
+    }
+    
+    private var serviceFeeFormula: String {
+        [
+            transaction.contractEarnings.formattedAmount(),
+            " x ",
+            transaction.servicePercentage.formattedAmount(),
+            "% = ",
+            serviceFee.formattedAmount()
+        ].joined()
     }
     
     private var gstTaxRow: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 2) {
                 Text("GST (CA) service fee refund")
-                Text("$\(serviceFee, specifier: "%.2f") x \(transaction.taxPercentage, specifier: "%.1f")% = $\(gstTaxAmount, specifier: "%.2f")")
+                Text(gstFormula)
                     .font(.caption)
                     .foregroundColor(.gray)
             }
             Spacer()
-            Text("-$\(gstTaxAmount, specifier: "%.2f")")
+            Text(gstTaxAmount.formattedAmount(showNegativeSign: true))
                 .frame(alignment: .trailing)
         }
+    }
+    
+    private var gstFormula: String {
+        [
+            serviceFee.formattedAmount(),
+            " x ",
+            transaction.taxPercentage.formattedAmount(),
+            "% = ",
+            gstTaxAmount.formattedAmount()
+        ].joined()
     }
     
     private var netEarningsRow: some View {
         HStack {
             Text("Net Earnings").bold()
                 .frame(maxWidth: .infinity, alignment: .leading)
-            Text("$\(transaction.netEarnings, specifier: "%.2f")").bold()
+            Text(transaction.netEarnings.formattedAmount())
+                .bold()
                 .frame(width: 100, alignment: .trailing)
         }
         .padding()
@@ -120,7 +145,7 @@ struct SummaryView: View {
     }
     
     private var serviceFee: Double {
-        (transaction.servicePercentage / 100) * transaction.contractEarnings
+        ((transaction.servicePercentage / 100) * transaction.contractEarnings)
     }
     
     private var gstTaxAmount: Double {
