@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @StateObject private var viewModel = ProfileViewModel()
+    @EnvironmentObject private var contentViewModel: ContentViewModel
 
     var body: some View {
         NavigationStack {
@@ -36,17 +37,13 @@ struct ProfileView: View {
                         .foregroundColor(.red)
                         .font(.caption)
                 }
-
-                Button(action: viewModel.logout) {
+                
+                Button {
+                    viewModel.logout()
+                } label: {
                     Text("Logout")
-                        .bold()
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
+                        .buttonStyle(ButtonStyle(backgroundColor: .red))
                 }
-                .padding()
             }
             .padding()
             .navigationTitle("Profile")

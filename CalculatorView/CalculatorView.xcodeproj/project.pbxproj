@@ -233,11 +233,11 @@
 		0EB603222D9464C700FA6567 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				0EB603392D946BF300FA6567 /* AuthenticationTabView.swift */,
-				0EB603312D94675300FA6567 /* Profile */,
 				0EB603252D9465EE00FA6567 /* AuthenticationManager.swift */,
-				0EB603242D9464D700FA6567 /* RegisterView */,
+				0EB603392D946BF300FA6567 /* AuthenticationTabView.swift */,
 				0EB603232D9464CE00FA6567 /* LoginView */,
+				0EB603312D94675300FA6567 /* Profile */,
+				0EB603242D9464D700FA6567 /* RegisterView */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";

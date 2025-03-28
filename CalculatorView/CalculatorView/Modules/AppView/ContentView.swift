@@ -8,10 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var appViewModel = ContentViewModel()
+    @StateObject private var viewModel = ContentViewModel()
     
     var body: some View {
-        if let _ = appViewModel.user {
+        VStack {
+            if viewModel.isLoading {
+                emptyView
+            } else {
+                mainContent
+            }
+        }
+        .showLoading(viewModel.isLoading)
+        .environmentObject(viewModel)
+    }
+    
+    @ViewBuilder
+    private var mainContent: some View {
+        if let _ = viewModel.user {
             TabView {
                 CalculatorView()
                     .tabItem {
@@ -31,6 +44,10 @@ struct ContentView: View {
         } else {
             AuthenticationTabView()
         }
+    }
+    
+    private var emptyView: some View {
+        EmptyView()
     }
 }
 
